@@ -1,7 +1,9 @@
 ---
 - name: Install Docker
-  hosts: all
+  hosts: localhost
   become: true
+  vars:
+    ansible_user: siefmohamed
   tasks:
     - name: Update apt cache
       apt:
